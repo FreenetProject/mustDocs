@@ -1,4 +1,4 @@
-# must.js documentation 
+# must-type.js documentation 
 in this page contains the the documentation about <b>must</b>
 in defination must.js is a framework which is inspired from the require() function in solidity, used for validating types and inputs on common js and even on es6 
 withiut the use of typescript, this good for aplication which has to require a type for aurguments of functions or input on forms.
@@ -19,7 +19,7 @@ without using must.js
 <p>with must.js</p>
 
 ```javascript
-const must = require("must");
+const must = require("must-type");
 function withMust(I_WANT_THIS_AS_STRING,I_WANT_THIS_AS_NUMBER){
    must(string(I_WANT_THIS_AS_STRING), int(I_WANT_THIS_AS_NUMBER));
    console.log(I_WANT_THIS_AS_STRING , I_WANT_THIS_AS_NUMBER);
@@ -96,7 +96,7 @@ this will be use less or never but it is included for simple use cases <br>
 <b>example:</b>
 
 ```javascript
-const {t, type} = require("must");
+const {t, type} = require("must-type");
 function sampleFunction(d){
    if(type(d) === t.str ){
       console.log(type(d)) 
@@ -191,7 +191,7 @@ mustTypeFunctions will return new TypeError and use <i>stack</i> as error messag
 <h4> with must and type checker functions</h4>
 
 ```javascript
-const {must, string,int} = require("must");
+const {must, string,int} = require("must-type");
 must(string(100),'not string');
    // TypeError 'not string'
 must(int(100), 'not number');
@@ -266,7 +266,7 @@ functions that will execute cb if statement is the type spicified
 #### Example 
 
 ```javascript
-const {ifString} = require("must");
+const {ifString} = require("must-type");
 ifString('abcd', () => {
    console.log('this is a string')
 }) // 'this is a string'
@@ -294,7 +294,7 @@ try {
 }
 
 // with must.tatch
-const {tatch} = require("must");
+const {tatch} = require("must-type");
 tatch(() => {
    console.log(lbd);
 })
