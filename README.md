@@ -19,7 +19,7 @@ without using must.js
 <p>with must.js</p>
 
 ```javascript
-const must = require("must-type");
+const {must,int,string} = require("must-type");
 function withMust(I_WANT_THIS_AS_STRING,I_WANT_THIS_AS_NUMBER){
    must(string(I_WANT_THIS_AS_STRING), int(I_WANT_THIS_AS_NUMBER));
    console.log(I_WANT_THIS_AS_STRING , I_WANT_THIS_AS_NUMBER);
